@@ -1,9 +1,9 @@
 from .common import *
-from dotenv import dotenv_values
+
 import cloudinary_storage
 
 
-config=dotenv_values(".env")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,12 +27,13 @@ CLOUDINARY_STORAGE = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbtest',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5000',
-        'PASSWORD':'ILoveDjango'
+        'NAME': config['DEV_DATABASE_NAME'],
+        'USER': config['DEV_DATABASE_USER'],
+        'HOST': config['DEV_DATABASE_HOST'],
+        'PORT': config['DEV_DATABASE_PORT'],
+        'PASSWORD':config['DEV_DATABASE_PASSWORD']
     }
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+

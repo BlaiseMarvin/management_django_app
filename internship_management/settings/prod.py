@@ -1,8 +1,6 @@
 import os
 from .common import *
-from dotenv import dotenv_values
 
-config=dotenv_values("..env")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -22,11 +20,11 @@ CLOUDINARY_STORAGE = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbtest',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5000',
-        'PASSWORD':'ILoveDjango'
+        'NAME': config['PROD_DATABASE_NAME'],
+        'USER': config['PROD_DATABASE_USER'],
+        'HOST': config['PROD_DATABASE_HOST'],
+        'PORT': config['PROD_DATABASE_PORT'],
+        'PASSWORD':config['PROD_DATABASE_PASSWORD']
     }
 }
 
