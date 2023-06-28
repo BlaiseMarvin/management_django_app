@@ -12,19 +12,19 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config['CLOUDINARY_CLOUD_NAME'],
-    'API_KEY': config['CLOUDINARY_API_KEY'],
-    'API_SECRET': config['CLOUDINARY_API_SECRET']
+    'CLOUD_NAME': os.environ['CLOUDINARY_CLOUD_NAME'],
+    'API_KEY':os.environ['CLOUDINARY_API_KEY'],
+    'API_SECRET': os.environ['CLOUDINARY_API_SECRET']
 }
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config['PROD_DATABASE_NAME'],
-        'USER': config['PROD_DATABASE_USER'],
-        'HOST': config['PROD_DATABASE_HOST'],
-        'PORT': config['PROD_DATABASE_PORT'],
-        'PASSWORD':config['PROD_DATABASE_PASSWORD']
+        'NAME': os.environ['PROD_DATABASE_NAME'],
+        'USER': os.environ['PROD_DATABASE_USER'],
+        'HOST': os.environ['PROD_DATABASE_HOST'],
+        'PORT': os.environ['PROD_DATABASE_PORT'],
+        'PASSWORD':os.environ['PROD_DATABASE_PASSWORD']
     }
 }
 

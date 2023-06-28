@@ -141,7 +141,7 @@ LOGGING = {
 # Configure the SendGrid Email service
 EMAIL_HOST='smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = config['SENDGRID_API_KEY']
+EMAIL_HOST_PASSWORD = os.environ['SENDGRID_API_KEY']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
