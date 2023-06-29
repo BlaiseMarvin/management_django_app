@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'cloudinary_storage',
     'cloudinary',
     'rest_framework',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,6 +51,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'internship_management.urls'
+
+CORS_ALLOWED_ORIGINS=["*"]
 
 TEMPLATES = [
     {

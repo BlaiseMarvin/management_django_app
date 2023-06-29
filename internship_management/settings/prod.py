@@ -28,7 +28,7 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['management-rl5i.onrender.com']
 
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
