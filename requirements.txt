@@ -32,3 +32,4 @@ urllib3
 vine
 wcwidth
 whitenoise
+django-cors-headers
