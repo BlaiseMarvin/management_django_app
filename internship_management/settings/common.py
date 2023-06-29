@@ -52,7 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'internship_management.urls'
 
-CORS_ALLOWED_ORIGINS=["*"]
+CORS_ALLOWED_ORIGINS=["https://management-rl5i.onrender.com/"]
 
 TEMPLATES = [
     {
